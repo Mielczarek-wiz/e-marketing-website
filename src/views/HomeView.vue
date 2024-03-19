@@ -15,9 +15,8 @@
 <style>
   .bg-image {
     background-image: linear-gradient(to bottom, rgba(0, 0, 150, 0.2), rgba(190, 234, 255)), url("/happy-dude.png");
-    /* Adjust the rgba values to make the image darker or lighter */
     background-size: cover;
-    color: white; /* Set text color to white for better readability */
+    color: white;
   }
 </style>
 
