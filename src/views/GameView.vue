@@ -55,7 +55,7 @@ export default {
     },
     attackPlayer() {
       const damage = getRandomValue(8, 15)
-      this.addLogMessage('Monster', 'attack', damage)
+      this.addLogMessage('Kraken', 'attack', damage)
       this.playerHealth -= damage
     },
     specialAttack() {
@@ -77,7 +77,7 @@ export default {
       this.attackPlayer()
     },
     surrender() {
-      this.winner = 'Monster'
+      this.winner = 'Kraken'
     },
     newGame() {
       this.monsterHealth = 100
@@ -100,15 +100,15 @@ export default {
 <template>
   <div id="game" className="w-2/3 mx-auto grid grid-flow-row gap-4 py-2">
     <section id="monster" className="text-center p-2 shadow-md rounded-md bg-cyan-100 space-y-2">
-      <h2 className="text-center text-lg italic">Monster Health</h2>
-      <div className="w-full h-10 bg-red-600">
-        <div className="w-full h-full bg-green-600" :style="monsterBarStyles"></div>
+      <h2 className="text-center text-lg italic">Kraken's Health</h2>
+      <div className="w-full h-10 rounded-full bg-red-600">
+        <div className="w-full h-full rounded-full bg-green-600" :style="monsterBarStyles"></div>
       </div>
     </section>
     <section id="player" className="text-center p-2 shadow-md rounded-md bg-cyan-100 space-y-2">
       <h2 className="text-center text-lg italic">Your Health</h2>
-      <div className="w-full h-10 bg-red-600">
-        <div className="w-full h-full bg-green-600" :style="playerBarStyles"></div>
+      <div className="w-full h-10 rounded-full bg-red-600">
+        <div className="w-full h-full rounded-full bg-green-600" :style="playerBarStyles"></div>
       </div>
     </section>
     <section v-if="winner" className="text-center p-2 shadow-md rounded-md bg-cyan-100">
@@ -123,7 +123,7 @@ export default {
         New Game
       </button>
     </section>
-    <section v-else className="grid grid-cols-2 gap-2 place-items-center">
+    <section v-else className="grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center">
       <button
         @click="attackMonster"
         className="border border-cyan-700 bg-cyan-700 hover:bg-cyan-500 hover:border-none w-48 py-4 rounded-md text-white"
