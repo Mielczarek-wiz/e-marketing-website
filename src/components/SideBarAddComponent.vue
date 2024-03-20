@@ -3,7 +3,7 @@
         methods: {
             goto() {
                 this.$router.push("/products");
-            }
+            }  
         }
     }
 </script>

@@ -103,9 +103,9 @@ export default {
 </script>
 
 <template>
-  <PopupComponent v-if="winner == 'Monster'" title="You lost" text="Don't worry you can still taste our delicious fish!" buttonText="Buy fish now!"/>
+  <PopupComponent v-if="winner == 'Monster'" title="You lost" text="The Kraken defeated you! Don't worry you can still taste our delicious fish!" buttonText="Buy fish now!"/>
   <PopupComponent v-if="winner == 'Draw'" title="Oh well" text="You didn't manage to defeat the Kraken but don't worry!" buttonText="Buy fish nonetheless!"/>
-  <PopupComponent v-if="winner == 'Player'" title="Victory!" text="You won! You can of feast on our delicious fish!" buttonText="Take me there!"/>
+  <PopupComponent v-if="winner == 'Player'" title="Victory!" text="You defeated the Kraken! You can of feast on our delicious fish!" buttonText="Take me there!"/>
   <div className="flex flex-col lg:flex-row">
     <SideBarAddComponent className="bg-sky-500 mx-4 p-4 rounded-3xl shadow-lg hidden lg:block w-1/6"/>
     <div id="game" className="w-2/3 mx-auto grid grid-flow-row gap-4 py-2">
