@@ -37,7 +37,7 @@ import TeamMemberComponent from '@/components/TeamMemberComponent.vue'
     </div>
     <div className="space-y-1">
       <div className="flex bg-gradient-to-r from-transparent via-sky-500 to-transparent">
-        <h3 className="py-6 font-semibold text-xl mx-auto text-center">Our Team</h3>
+        <h3 className="py-6 font-semibold text-xl mx-auto text-center">UltraMarine Team</h3>
       </div>
       <div className="flex flex-wrap justify-evenly">
         <TeamMemberComponent

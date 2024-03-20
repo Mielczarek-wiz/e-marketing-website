@@ -30,7 +30,8 @@
         <div className="font-bold text-lg w-full md:w-3/4 lg:w-2/5 text-justify mb-6">
           UltraMarine offers unique and high quality fish products, focusing on providing fresh and rare fish species. Our range ranges from raw fish to ready-to-eat dishes prepared with the freshest ingredients. Each product is carefully selected to provide customers with a unique culinary experience.
         </div>
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex flex-col items-center justify-center">
+          <img src="/src/assets/logo.png" alt="logo" className="w-48 mb-6"/>
           <button className="bg-white py-4 px-8 font-bold rounded-full hover:bg-red-700 text-black hover:text-white transition-colors duration-500 shadow-lg" @click="goto()">See our products</button>
         </div>
       </div>

@@ -11,6 +11,9 @@
         <span className="ml-6 mb-2 text-md">Address: 42 Long St. New Carthage 21-370</span>
         <span className="ml-6 mb-2 text-md">Phone: (+48) 111 222 333</span>
         <span className="ml-6 mb-2 text-md">E-mail: contact@ultramarine.com</span>
+        <div className="flex items-center justify-center">
+          <img src="/src/assets/logo.png" alt="logo" className="w-48 m-6"/>
+        </div>
       </div>
       <div className="flex flex-col items-center">
         <form action="#" className="space-y-2 m-4">

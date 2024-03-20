@@ -105,10 +105,13 @@ export default {
 <template>
   <PopupComponent v-if="winner == 'Monster'" title="You lost" text="The Kraken defeated you! Don't worry you can still taste our delicious fish!" buttonText="Buy fish now!"/>
   <PopupComponent v-if="winner == 'Draw'" title="Oh well" text="You didn't manage to defeat the Kraken but don't worry!" buttonText="Buy fish nonetheless!"/>
-  <PopupComponent v-if="winner == 'Player'" title="Victory!" text="You defeated the Kraken! You can of feast on our delicious fish!" buttonText="Take me there!"/>
+  <PopupComponent v-if="winner == 'Player'" title="Victory!" text="You defeated the Kraken! You can now feast on our delicious fish!" buttonText="Take me there!"/>
   <div className="flex flex-col lg:flex-row">
-    <SideBarAddComponent className="bg-sky-500 mx-4 p-4 rounded-3xl shadow-lg hidden lg:block w-1/6"/>
-    <div id="game" className="w-2/3 mx-auto grid grid-flow-row gap-4 py-2">
+    <SideBarAddComponent className="bg-sky-500 mx-4 p-4 rounded-3xl shadow-lg hidden lg:block w-1/6 mb-4"/>
+    <div id="game" className="w-2/3 mx-auto grid grid-flow-row gap-4 py-2 mb-4">
+      <div className="flex">
+        <h2 className="m-2 p-2 pb-6 font-bold text-2xl mx-auto">Defeat the Kraken and save UltraMarine!</h2>
+      </div> 
       <section id="monster" className="text-center p-2 shadow-md rounded-md bg-cyan-100 space-y-2">
         <h2 className="text-center text-lg italic">Kraken's Health</h2>
         <div className="w-full h-10 rounded-full bg-red-800">
@@ -138,14 +141,14 @@ export default {
           @click="attackMonster"
           className="border border-cyan-700 bg-sky-500 hover:bg-white hover:border-none w-48 py-4 rounded-full text-white hover:text-black transition-colors duration-500"
         >
-          ATTACK
+          NORMAL ATTACK
         </button>
         <button
           @click="specialAttack"
           className="border border-cyan-700 bg-sky-500 hover:bg-white hover:border-none w-48 py-4 rounded-full text-white hover:text-black transition-colors duration-500 disabled:cursor-not-allowed disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-800"
           :disabled="canUseSpecialAttack"
         >
-          ULTIMATE
+          ULTRAMARINE ATTACK
         </button>
         <button
           @click="healPlayer"
@@ -183,6 +186,6 @@ export default {
         </ul>
       </section>
     </div>
-    <SideBarAddComponent className="bg-sky-500 p-4 rounded-3xl shadow-lg w-full md:w-2/3 lg:w-1/6 md:mx-auto lg:mx-4"/>
+    <SideBarAddComponent className="bg-sky-500 p-4 rounded-3xl shadow-lg w-full md:w-2/3 lg:w-1/6 md:mx-auto lg:mx-4 mb-4"/>
   </div>
 </template>
