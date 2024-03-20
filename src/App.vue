@@ -7,13 +7,17 @@ import { routes } from './router'
 
 <template>
   <GreatHeader>
-    <RouterLink v-for="(route, index) in computedRoutes" :key="index" :to="route.path"
-      ><span className="text-lg hover:text-xl text-white hover:text-cyan-700 h-full">{{
-        route.displayedName
-      }}</span></RouterLink
-    >
+    <template v-for="(route, index) in computedRoutes">
+      <RouterLink v-if="route.visibleInMenu" :key="index" :to="route.path">
+        <span
+          class="h-full text-white transition-all duration-700 hover:text-lg hover:text-cyan-800"
+        >
+          {{ route.displayedName }}
+        </span>
+      </RouterLink>
+    </template>
   </GreatHeader>
-  <main className="flex-1 w-dvw">
+  <main className="flex-1 w-dvw overflow-y-auto overflow-x-hidden">
     <RouterView />
   </main>
   <GreatFooter />
